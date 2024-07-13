@@ -37,7 +37,7 @@ export default function Login() {
 
     if (data.msg === "done") {
       localStorage.setItem("userToken", data.token);
-      navigate("/");
+      navigate("/notes");
       setError(null);
       setLoader(false);
     }

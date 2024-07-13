@@ -1,7 +1,6 @@
 import React from "react";
-import "./ProtectedRoute.module.css";
-import { Navigate } from "react-router-dom";
 
+import { Navigate } from "react-router-dom";
 
 export default function ProtectedRoute(props) {
   if (localStorage.getItem("userToken")) {
