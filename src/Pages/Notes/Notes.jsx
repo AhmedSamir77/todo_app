@@ -25,22 +25,20 @@ export default function Notes() {
         "https://note-sigma-black.vercel.app/api/v1/notes",
         values,
         {
-          headers: {
-            token: localStorage.getItem("userToken"),
-          },
+          headers: { token: localStorage.getItem("userToken") },
         }
       );
       console.log(data);
+
+      // if (data.msg == "done") {
+      //   values.title = "";
+      //   values.content = "";
+      //   handleClose();
+      // }
     } catch (error) {
       console.log(error);
     }
   }
-
-  // if (data.msg == "done") {
-  //   values.title = "";
-  //   values.content = "";
-  //   handleClose();
-  // }
 
   return (
     <>
